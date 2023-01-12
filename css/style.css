@@ -1,0 +1,152 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-size: 12px;
+  padding: 30px;
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+main {
+  max-width: 57.5rem;
+  border-radius: 20px;
+  /* height: 31.8125rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  /* position: relative; */
+}
+
+.img-left {
+  position: relative;
+}
+
+.img-box {
+  position: absolute;
+  top: 45%;
+  left: -90px;
+  z-index: 999;
+}
+
+.img-desktop-pc {
+  position: absolute;
+  top: 20%;
+  left: -40px;
+  z-index: 888;
+}
+
+.img-desktop-pattern {
+  position: absolute;
+  top: 10%;
+  left: -50px;
+  z-index: 889;
+}
+
+.accordion {
+  margin-top: 4.0625rem;
+  margin-bottom: 5.1875rem;
+  padding-right: 5.9375rem;
+}
+
+.heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1e1f36;
+  margin-bottom: 2.6875rem;
+}
+
+.container {
+  position: relative;
+}
+
+hr {
+  width: 100;
+  border: 1px solid #e8e8ea;
+}
+
+.label {
+  font-size: 0.875rem;
+  position: relative;
+  font-weight: 400;
+  color: #4b4c5f;
+  cursor: pointer;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6875rem;
+}
+
+.label:hover {
+  color: #f47b56;
+}
+
+.label::before {
+  content: url(../images/icon-arrow-down.svg);
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.content {
+  font-size: 0.75rem;
+  position: relative;
+  transition: all 0.5s;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #787887;
+  height: 0;
+  overflow: hidden;
+  padding-right: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Unhides the content part when a container is clicked */
+
+.accordion .container.active .content {
+  height: 56px;
+  overflow: visible;
+}
+
+.accordion .container.active .label {
+  font-weight: 700;
+}

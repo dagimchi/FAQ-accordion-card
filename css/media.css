@@ -1,0 +1,35 @@
+@media (max-width: 58.5em) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .img-desktop-pc {
+    width: 237px;
+    height: 180px;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .img-box {
+    width: 75px;
+    top: -27px;
+    left: 35%;
+  }
+
+  .img-desktop-pattern {
+    width: 237px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .accordion {
+    padding-right: 0;
+  }
+
+  .heading {
+    margin-top: 120px;
+    text-align: center;
+  }
+}
